@@ -1,0 +1,96 @@
+/*apply css properties to body tag*/
+
+/* body {
+  position: absolute;
+  left: 0%;
+  text-align: center;
+} */
+
+/*apply css properties to container class*/
+
+.container {
+  /* justify-content: center; */
+  align-items: center;
+  display: flex;
+  height: 100%;
+  text-align: center;
+}
+
+/*apply css properties to button tag*/
+
+/* button {
+  width: 90px;
+  height: 60px;
+  font-size: 30px;
+  background-color: green;
+  color: honeydew;
+} */
+
+/*apply hover effect to button tag*/
+
+/* button:hover {
+  background-color: greenyellow;
+  color: grey;
+} */
+
+/*apply css properties to h2 tag*/
+.counter {
+  background-color: grey;
+  border: none;
+  color: white;
+  /* padding: 10px; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 50%;
+}
+
+.parent_container {
+  display: inline;
+}
+
+.counting {
+  margin: 10px;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  /* width: 100%; */
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 12px;
+  border-radius: 10%;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  /* background-color: #f1f1f1; */
+}
+
+ul {
+  list-style-type: none;
+  padding: none;
+  margin: none;
+}
+
+.share {
+  margin-left: 20px;
+}
+
+#counting {
+  margin-left: 10px;
+  margin-right: 10px;
+}
