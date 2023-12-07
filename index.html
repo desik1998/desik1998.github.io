@@ -717,6 +717,9 @@
       </div>
       <div class="post">
         <h2>Use Python Library</h2>
+        <p></p>
+        <h3>User</h3>
+        <code>
         <p>def log(message):</p>
         <p>"""</p>
         <p>Logs a formatted message with a timestamp. :param message: The message to be logged.</p>
@@ -724,7 +727,9 @@
         <p>timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")</p>
         <p>print(f"[{timestamp}] {message}")</p>
         <p>Does the above code log things in Lambda?</p>
-        <p><strong>Bard:</strong></p>
+        </code>
+        <p></p>
+        <h3>Bard</h3>
         <p>Yes, the above code does log things in Lambda.</p>
         <p>
           The code defines a function called log that takes a message as input and logs it to the console with a timestamp. When the code is run in
@@ -732,69 +737,66 @@
         </p>
 
         <p>This code would output the following to the Lambda logs:</p>
-        <p>[2023-12-06 17:27:48] This is a test message.</p>
+        <code><p>[2023-12-06 17:27:48] This is a test message.</p></code>
         <p>As you can see, the timestamp and message are both logged to the console</p>
-        <p><strong>User:</strong> "Why is this not the Robust way to do it"</p>
+        <h3>User</h3>
+        <p>Why is this not the Robust way to do it</p>
+        <h3>Bard</h3>
+        <p>While the provided code does log things in Lambda, it is not considered the most robust way for several reasons:</p>
         <p>
-          <strong>Bard:</strong> " While the provided code does log things in Lambda, it is not considered the most robust way for several reasons:
-        </p>
-        <p>
-          1. Reliance on `print`: `print` is a built-in function intended for human-readable output and not designed for structured logging. It can
-          cause issues with log parsing and aggregation tools.
+          <i>1. Reliance on `print`:</i> `print` is a built-in function intended for human-readable output and not designed for structured logging. It
+          can cause issues with log parsing and aggregation tools.
         </p>
 
         <p>
-          2. Lack of context: The code doesn't include any context about the source of the log message, which can be crucial for debugging and
+            <i>2. Lack of context:</i> The code doesn't include any context about the source of the log message, which can be crucial for debugging and
           troubleshooting.
         </p>
 
-        <p>3. Limited formatting: The formatting options available with `print` are limited compared to dedicated logging libraries.</p>
+        <p><i>3. Limited formatting:</i> The formatting options available with `print` are limited compared to dedicated logging libraries.</p>
         <p>
-          4. Lack of error handling: The code doesn't handle any potential errors that might occur during logging, which could lead to missing or
+          <i>4. Lack of error handling:</i> The code doesn't handle any potential errors that might occur during logging, which could lead to missing or
           incomplete logs.
         </p>
 
-        <p>5. Security concerns: Sending sensitive information directly to the console through `print` can be a security risk.</p>
+        <p><i>5. Security concerns:</i> Sending sensitive information directly to the console through `print` can be a security risk.</p>
+        <p> </p>
         <p>Here are some alternative approaches for more robust logging in Lambda:</p>
         <p>
-          1. Use a dedicated logging library: Several libraries like `logging` and `python-loguru` provide more flexibility and control over log
+          <i>1. Use a dedicated logging library:</i> Several libraries like `logging` and `python-loguru` provide more flexibility and control over log
           formatting, levels, and destinations.
         </p>
 
         <p>
-          2. Add context to log messages: Include information like the function name, Lambda invocation ID, and additional relevant details to aid in
-          troubleshooting.
+            <i>2. Add context to log messages:</i> Include information like the function name, Lambda invocation ID, and additional relevant details to aid
+          in troubleshooting.
         </p>
 
         <p>
-          3. Use a logging framework: Cloud platforms like AWS offer logging frameworks like CloudWatch Logs that provide centralized log management
-          and integration with other services.
+            <i>3. Use a logging framework:</i> Cloud platforms like AWS offer logging frameworks like CloudWatch Logs that provide centralized log
+          management and integration with other services.
         </p>
 
-        <p>4. Implement proper error handling: Handle any potential exceptions during logging to avoid missing log entries.</p>
-        <p>5. Use secure logging mechanisms: Consider using tools like AWS X-Ray or Splunk for secure log storage and analysis.</p>
+        <p><i>4. Implement proper error handling:</i> Handle any potential exceptions during logging to avoid missing log entries.</p>
+        <p><i>5. Use secure logging mechanisms:</i> Consider using tools like AWS X-Ray or Splunk for secure log storage and analysis.</p>
         <p>By adopting these practices, you can ensure your Lambda function logs are robust, informative, and easier to manage and analyze. "</p>
         <div class="parent_container">
           <div class="container">
             <!-- adding button and heading to show the digits -->
             <!--increment() and decrement() functions on button click-->
             <button class="counter" onclick="increment()">+</button>
-            <p id="counting">24</p>
+            <p id="counting">20</p>
             <button class="counter" onclick="decrement()">-</button>
             <button class="share collapsible">Share</button>
           </div>
 
-          <button type="button" id="c7" class="collapsible">Comments</button>
+          <button type="button" class="collapsible">Comments</button>
           <div class="content">
             <ul>
-              <li><strong>Lorem,</strong> ipsum dolor sit amet consectetur adipisicing elit.</li>
-              <li><strong>Lorem,</strong> ipsum dolor sit amet consectetur adipisicing elit.</li>
-              <li><strong>Lorem,</strong> ipsum dolor sit amet consectetur adipisicing elit.</li>
-              <li><strong>Lorem,</strong> ipsum dolor sit amet consectetur adipisicing elit.</li>
             </ul>
           </div>
           <script>
-            var coll = document.getElementById('c7');
+            var coll = document.getElementsByClassName('collapsible');
             var i;
 
             for (i = 0; i < coll.length; i++) {
